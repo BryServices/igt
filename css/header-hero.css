@@ -1,0 +1,826 @@
+/* ============================================
+   HEADER & HERO AGENCY - STYLE UNIVERSITÉ INTERNATIONALE
+   CSS Professionnel et Propre - IGT
+   IMPORTANT: Ce fichier doit être chargé APRÈS style.css
+   ============================================ */
+
+/* ============================================
+   1. TOPBAR - Style Professionnel
+   ============================================ */
+
+.header.style2 .topbar {
+    background: linear-gradient(135deg, #2E2751 0%, #1a1a3a 100%) !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1001;
+}
+
+.header.style2 .topbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.3), transparent);
+}
+
+.header.style2 .top-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.header.style2 .topbar .single-contact,
+.header.style2 .topbar .single-contact a {
+    display: inline-flex !important;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    padding: 4px 0;
+    margin-right: 25px;
+}
+
+.header.style2 .topbar .single-contact i {
+    color: #ff0000 !important;
+    margin-right: 8px;
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+}
+
+.header.style2 .topbar .single-contact:hover {
+    color: #fff;
+    transform: translateX(3px);
+}
+
+.header.style2 .topbar .single-contact:hover i {
+    color: #0983e1;
+}
+
+/* Social Icons Topbar */
+.header.style2 .topbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header.style2 .topbar .social-icons {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header.style2 .topbar .social-icons li {
+    margin: 0;
+}
+
+.header.style2 .topbar .social-icons li a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.header.style2 .topbar .social-icons li a:hover {
+    background: #ff0000 !important;
+    color: #fff !important;
+    border-color: #ff0000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* ============================================
+   2. MIDDLE HEADER - Navigation Principale
+   ============================================ */
+
+.header.style2 .middle-header {
+    background: #fff !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08) !important;
+    position: relative !important;
+    top: auto !important;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    width: 100%;
+    border: none;
+}
+
+.header.style2.sticky .middle-header {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+}
+
+.header.style2 .middle-inner {
+    padding: 18px 0 !important;
+    background: #fff !important;
+    z-index: 2035;
+}
+
+/* Logo */
+.header.style2 .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header.style2 .img-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header.style2 .img-logo img {
+    max-height: 65px !important;
+    width: auto;
+    height: auto;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    margin-top: 0 !important;
+}
+
+.header.style2 .img-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Menu Area */
+.header.style2 .menu-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header.style2 .nav-inner {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+.header.style2 .nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.header.style2 .nav li {
+    position: relative;
+    margin: 0;
+}
+
+.header.style2 .nav li a {
+    display: block;
+    padding: 12px 18px !important;
+    color: #2E2751 !important;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 6px;
+}
+
+.header.style2 .nav li a::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #0983e1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+.header.style2 .nav li:hover a,
+.header.style2 .nav li.active a {
+    color: #0983e1 !important;
+    background: rgba(9, 131, 225, 0.05);
+}
+
+.header.style2 .nav li:hover a::before,
+.header.style2 .nav li.active a::before {
+    width: calc(100% - 36px);
+}
+
+/* Dropdown Menu */
+.header.style2 .nav li .sub-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 240px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 12px 0;
+    margin: 0;
+    list-style: none;
+    z-index: 9999;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header.style2 .nav li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header.style2 .nav li .sub-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.header.style2 .nav li .sub-menu li a {
+    padding: 12px 24px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 0;
+    display: block;
+}
+
+.header.style2 .nav li .sub-menu li a::before {
+    display: none;
+}
+
+.header.style2 .nav li .sub-menu li a:hover {
+    color: #fff;
+    background: #0983e1;
+    padding-left: 28px;
+}
+
+/* Bouton Inscription */
+.header.style2 .button {
+    display: flex;
+    align-items: center;
+}
+
+.header.style2 .bizwheel-btn {
+    background: linear-gradient(135deg, #0983e1 0%, #0669b8 100%);
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(9, 131, 225, 0.25);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header.style2 .bizwheel-btn:hover {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 0, 0, 0.35);
+}
+
+/* ============================================
+   3. HERO AGENCY - Style Universitaire International
+   ============================================ */
+
+.hero-agency {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-agency .agency-inner {
+    position: relative !important;
+    width: 100%;
+    min-height: 90vh !important;
+    display: flex !important;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed;
+    padding: 120px 0 80px !important;
+}
+
+.hero-agency .agency-inner.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(46, 39, 81, 0.92) 0%, rgba(46, 39, 81, 0.85) 100%) !important;
+    z-index: 1;
+}
+
+.hero-agency .agency-inner.overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.hero-agency .ageny-main {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+/* Hero Text */
+.hero-agency .hero-text {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+}
+
+.hero-agency .hero-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ff0000;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 3px solid #ff0000;
+    border-radius: 4px;
+    position: relative;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-agency .hero-text h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 auto 30px;
+    max-width: 900px;
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-agency .hero-text h1 span {
+    display: block;
+    color: #0983e1;
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Video Play Button */
+.hero-agency .video-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-agency .video-play-main {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-agency .video-play-main .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0983e1 0%, #0669b8 100%);
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(9, 131, 225, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 5;
+}
+
+.hero-agency .video-play-main .video i {
+    margin-left: 4px;
+}
+
+.hero-agency .video-play-main .video:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.5);
+}
+
+/* Waves Animation */
+.hero-agency .waves-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+}
+
+.hero-agency .waves-block .waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(9, 131, 225, 0.3);
+    border-radius: 50%;
+    animation: waveAnimation 2s ease-out infinite;
+}
+
+.hero-agency .waves-block .wave-1 {
+    width: 90px;
+    height: 90px;
+    animation-delay: 0s;
+}
+
+.hero-agency .waves-block .wave-2 {
+    width: 120px;
+    height: 120px;
+    animation-delay: 0.5s;
+}
+
+.hero-agency .waves-block .wave-3 {
+    width: 150px;
+    height: 150px;
+    animation-delay: 1s;
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Agency Features */
+.hero-agency .agency-feature {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.hero-agency .a-feature {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-agency .a-feature::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0983e1, #ff0000);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.hero-agency .a-feature:hover::before {
+    transform: scaleX(1);
+}
+
+.hero-agency .a-feature:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.hero-agency .a-feature i {
+    font-size: 48px;
+    color: #0983e1;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-agency .a-feature:hover i {
+    color: #ff0000;
+    transform: scale(1.15) rotate(5deg);
+}
+
+.hero-agency .a-feature h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2E2751;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-agency .a-feature p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   4. RESPONSIVE MOBILE - Optimisations
+   ============================================ */
+
+@media only screen and (max-width: 991px) {
+    /* Topbar Mobile */
+    .header.style2 .topbar {
+        padding: 8px 0;
+    }
+    
+    .header.style2 .top-contact {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .header.style2 .topbar .single-contact {
+        font-size: 12px;
+        justify-content: center;
+    }
+    
+    .header.style2 .topbar-right {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    /* Header Mobile */
+    .header.style2 .middle-inner {
+        padding: 15px 0;
+    }
+    
+    .header.style2 .img-logo img {
+        max-height: 55px;
+    }
+    
+    .header.style2 .nav {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .header.style2 .nav li {
+        width: 100%;
+    }
+    
+    .header.style2 .nav li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .header.style2 .nav li .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: #f8f9fa;
+        margin-left: 20px;
+        margin-top: 0;
+        padding: 10px 0;
+    }
+    
+    .header.style2 .button {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .header.style2 .bizwheel-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Topbar Mobile Small */
+    .header.style2 .topbar {
+        padding: 10px 0;
+    }
+    
+    .header.style2 .top-contact {
+        gap: 6px;
+    }
+    
+    .header.style2 .topbar .single-contact {
+        font-size: 11px;
+    }
+    
+    .header.style2 .topbar .social-icons li a {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    /* Header Mobile Small */
+    .header.style2 .middle-inner {
+        padding: 12px 0;
+    }
+    
+    .header.style2 .img-logo img {
+        max-height: 50px;
+    }
+    
+    /* Hero Mobile */
+    .hero-agency {
+        min-height: auto;
+    }
+    
+    .hero-agency .agency-inner {
+        min-height: auto;
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+    }
+    
+    .hero-agency .hero-text {
+        margin-bottom: 40px;
+    }
+    
+    .hero-agency .hero-text h4 {
+        font-size: 12px;
+        padding: 6px 15px;
+        letter-spacing: 2px;
+    }
+    
+    .hero-agency .hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    
+    .hero-agency .hero-text h1 span {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    
+    .hero-agency .video-head {
+        margin-top: 30px;
+    }
+    
+    .hero-agency .video-play-main .video {
+        width: 70px;
+        height: 70px;
+        font-size: 22px;
+    }
+    
+    .hero-agency .waves-block {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .hero-agency .waves-block .wave-1 {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .hero-agency .waves-block .wave-2 {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .hero-agency .waves-block .wave-3 {
+        width: 110px;
+        height: 110px;
+    }
+    
+    /* Features Mobile */
+    .hero-agency .agency-feature {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 30px;
+    }
+    
+    .hero-agency .a-feature {
+        padding: 30px 20px;
+    }
+    
+    .hero-agency .a-feature i {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-agency .a-feature h4 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .hero-agency .a-feature p {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Hero Tablet */
+    .hero-agency .hero-text h1 {
+        font-size: 42px;
+    }
+    
+    .hero-agency .hero-text h1 span {
+        font-size: 36px;
+    }
+    
+    .hero-agency .agency-feature {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* ============================================
+   5. STICKY HEADER - Améliorations
+   ============================================ */
+
+.header.style2.sticky .middle-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header.style2.sticky .img-logo img {
+    max-height: 55px;
+}
+
+.header.style2.sticky .nav li a {
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+/* ============================================
+   FIN DU CSS HEADER & HERO
+   ============================================ */
+
