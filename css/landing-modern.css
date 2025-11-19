@@ -1,0 +1,933 @@
+/* ============================================
+   LANDING PAGE MODERNE - STYLE DUOLINGO-LIKE
+   Thème Violet/Rose avec Dégradés
+   ============================================ */
+
+/* ============================================
+   RESET & VARIABLES
+   ============================================ */
+
+:root {
+    --violet-primary: #6366f1;
+    --violet-light: #a78bfa;
+    --violet-lighter: #c084fc;
+    --rose-bg: #faf5ff;
+    --rose-bg-light: #f5f0ff;
+    --orange-accent: #f97316;
+    --red-accent: #ef4444;
+    --gray-dark: #1f2937;
+    --gray-medium: #6b7280;
+    --gray-light: #f3f4f6;
+    --white: #ffffff;
+    --shadow-soft: 0 10px 25px rgba(99, 102, 241, 0.15);
+    --shadow-hover: 0 20px 40px rgba(99, 102, 241, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--gray-dark);
+    background: var(--rose-bg);
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER MODERNE
+   ============================================ */
+
+.modern-header {
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.modern-header .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modern-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modern-header .nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+
+.modern-header .nav-menu a {
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.modern-header .nav-menu a:hover {
+    color: var(--violet-primary);
+}
+
+.modern-header .btn-primary {
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-header .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    background: linear-gradient(135deg, var(--violet-light), var(--violet-lighter));
+}
+
+.modern-header .burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.modern-header .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--violet-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.modern-hero {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--rose-bg) 0%, var(--rose-bg-light) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.modern-hero .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.modern-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modern-hero-content p {
+    font-size: 1.25rem;
+    color: var(--gray-medium);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.modern-hero-content .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.modern-hero-content .btn-large {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modern-hero-content .btn-gradient {
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    color: var(--white);
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-hero-content .btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-hero-content .btn-outline {
+    background: var(--white);
+    color: var(--violet-primary);
+    border: 2px solid var(--violet-primary);
+}
+
+.modern-hero-content .btn-outline:hover {
+    background: var(--violet-primary);
+    color: var(--white);
+}
+
+.modern-hero-image {
+    position: relative;
+}
+
+.modern-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 3rem;
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-hero-image .floating-badge {
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.modern-hero-image .floating-badge .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+
+.modern-stats {
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+.modern-stats .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.modern-stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--rose-bg);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.modern-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-stat-card .number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.modern-stat-card .label {
+    color: var(--gray-medium);
+    font-size: 1rem;
+}
+
+/* ============================================
+   ADVANTAGES SECTION
+   ============================================ */
+
+.modern-advantages {
+    padding: 6rem 2rem;
+    background: var(--rose-bg-light);
+}
+
+.modern-advantages .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.modern-advantages-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.modern-advantages-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.modern-advantages-header p {
+    font-size: 1.25rem;
+    color: var(--gray-medium);
+}
+
+.modern-advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.modern-advantage-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-advantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--violet-primary), var(--violet-lighter));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.modern-advantage-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-advantage-card:hover::before {
+    transform: scaleX(1);
+}
+
+.modern-advantage-card .icon-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-advantage-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.modern-advantage-card p {
+    color: var(--gray-medium);
+    line-height: 1.8;
+}
+
+/* ============================================
+   POPULAR COURSES SECTION
+   ============================================ */
+
+.modern-courses {
+    padding: 6rem 2rem;
+    background: var(--white);
+}
+
+.modern-courses .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.modern-courses-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.modern-courses-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.modern-courses-header p {
+    font-size: 1.25rem;
+    color: var(--gray-medium);
+}
+
+.modern-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.modern-course-card {
+    background: var(--gray-light);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.modern-course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-course-card .course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+}
+
+.modern-course-card .course-content {
+    padding: 2rem;
+}
+
+.modern-course-card .course-category {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    color: var(--white);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modern-course-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--gray-dark);
+}
+
+.modern-course-card p {
+    color: var(--gray-medium);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.modern-course-card .course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modern-course-card .course-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--orange-accent);
+    font-weight: 600;
+}
+
+.modern-course-card .course-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-lighter));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   TEACHER SECTION
+   ============================================ */
+
+.modern-teacher {
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-teacher::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.modern-teacher .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.modern-teacher-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.modern-teacher-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.8;
+}
+
+.modern-teacher-content .btn-white {
+    background: var(--white);
+    color: var(--violet-primary);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-teacher-content .btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-teacher-image {
+    position: relative;
+}
+
+.modern-teacher-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 3rem;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-teacher-image .teacher-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.modern-teacher-image .teacher-badge .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.modern-teacher-image .teacher-badge .text {
+    color: var(--gray-dark);
+    font-weight: 600;
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
+.modern-testimonials {
+    padding: 6rem 2rem;
+    background: var(--rose-bg);
+}
+
+.modern-testimonials .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.modern-testimonials-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.modern-testimonials-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.modern-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.modern-testimonial-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.modern-testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.modern-testimonial-card .stars {
+    color: var(--orange-accent);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.modern-testimonial-card .quote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--gray-medium);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.modern-testimonial-card .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.modern-testimonial-card .author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-image: linear-gradient(135deg, var(--violet-primary), var(--violet-lighter)) 1;
+    object-fit: cover;
+}
+
+.modern-testimonial-card .author-info h4 {
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: 0.25rem;
+}
+
+.modern-testimonial-card .author-info p {
+    font-size: 0.875rem;
+    color: var(--gray-medium);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.modern-footer {
+    background: var(--gray-dark);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+}
+
+.modern-footer .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.modern-footer h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.modern-footer ul {
+    list-style: none;
+}
+
+.modern-footer ul li {
+    margin-bottom: 0.75rem;
+}
+
+.modern-footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.modern-footer ul li a:hover {
+    color: var(--violet-light);
+}
+
+.modern-footer .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modern-footer .social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.modern-footer .social-links a:hover {
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-light));
+    transform: translateY(-3px);
+}
+
+.modern-footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (max-width: 1024px)
+   ============================================ */
+
+@media screen and (max-width: 1024px) {
+    .modern-hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .modern-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .modern-stats .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modern-advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modern-courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modern-testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .modern-teacher .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (max-width: 640px)
+   ============================================ */
+
+@media screen and (max-width: 640px) {
+    .modern-header .nav-menu {
+        display: none;
+    }
+    
+    .modern-header .burger-menu {
+        display: flex;
+    }
+    
+    .modern-hero {
+        padding: 3rem 1rem;
+    }
+    
+    .modern-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .modern-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .modern-hero-content .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .modern-hero-content .btn-large {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .modern-stats .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-courses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-teacher {
+        padding: 3rem 1rem;
+    }
+    
+    .modern-teacher-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .modern-teacher-content p {
+        font-size: 1rem;
+    }
+    
+    .modern-footer .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modern-advantages-header h2,
+    .modern-courses-header h2,
+    .modern-testimonials-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .modern-advantage-card,
+    .modern-course-card,
+    .modern-testimonial-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ============================================
+   FIN DU CSS
+   ============================================ */
+
